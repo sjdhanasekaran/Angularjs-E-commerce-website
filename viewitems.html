@@ -1,0 +1,29 @@
+<div class="container">
+ <div class="alert {{alerttype}}" ng-show="showSuccessAlert">
+     <button type="button" class="close" data-ng-click="switchBool('showSuccessAlert')">
+          <span aria-hidden="true">&times;</span>
+        </button>{{successTextAlert}}
+      </div>
+
+ 
+
+    <div ng-repeat="x in catnames">
+    <h3 class="text-center">{{x}}</h3>   
+
+ <div class="row mt-3 mb-3">
+  <div class="col-sm-3" ng-if="x==c.category" ng-repeat="c in products">
+    <div class="card">
+
+      <div class="card-body"> 
+       <a href="#/!productdetail"><img class="card-img-top" src="{{c.img}}">
+        <h5 class="card-title">{{c.proname}}</h5></a>
+        <p class="card-text">Price : {{ c.price| currency:'&#8377;'}}</p>
+       <button class="btn btn-primary" ng-click="additems(c.proname,c.img,c.price)">Add to Cart<span class="material-icons">&#xe854;</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div> 

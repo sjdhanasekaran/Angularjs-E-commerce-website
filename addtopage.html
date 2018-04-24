@@ -1,0 +1,40 @@
+<div class="container text-center mt-4">
+	<h5>Add A Category ?</h5>
+<form class="mt-4">
+  <div class="form-group">
+    <input type="text" class="form-control"  name="catname" ng-model="catname" placeholder="Category name">
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click=addcatname()>Add Category</button>
+</form>
+</div>
+<hr/>
+<div class="container text-center mt-4">
+		<h5 >Add product to your page ?</h5>
+<form class="mt-4">
+	<div class="form-group">
+    <input type="text" class="form-control"  name="proname" ng-model="proname" placeholder="Product name">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control"  name="imname" ng-model="imname" placeholder="image name">
+  </div>
+
+  <div class="form-group">
+    <select class="form-control" name="category" ng-model="category">
+    	<option value="" disabled selected hidden>Please Choose...</option>
+      <option ng-repeat="c in catnames">{{c}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input type="number" class="form-control" name="price" ng-model="price" placeholder="Enter price">
+  </div>
+
+    <div class="form-group">
+    <textarea class="form-control" placeholder="enter description about the product" rows="3" name="descriptin" ng-model="descriptin"></textarea>
+  </div>
+
+   <button type="submit" class="btn btn-primary" ng-click=addproduct()>Add Item</button>
+
+</form>
+</div>
